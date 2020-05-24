@@ -42,7 +42,7 @@ pipeline {
         stage('Start New Server!') {
             steps{
 	    		// to create server
-                    sh 'npm run dev
+                    sh 'npm run dev'
                 
            	 }
         	}
