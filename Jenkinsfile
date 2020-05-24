@@ -1,10 +1,6 @@
 pipeline {
     agent any
-    environment{
-        JENKINS_NODE_COOKIE = 'dontkillmeplease'
-        PORT=5000
-}
-
+    
     stages {
     stage('Preparation') { // for display purposes
             steps {
@@ -35,7 +31,7 @@ pipeline {
                 script {
                     try {
                         // kill any running instances of the app if applicable
-                        sh 'kill $(lsof -t -i:PORT)'
+                        sh 'kill $(lsof -t -i:5000)'
                     } catch (all) {
                         // if it fails that should mean a server wasn't already running
                         echo 'No server was already running'
