@@ -1,21 +1,10 @@
-let express=require('express');
-
-let app=express();
-
-
-app.use('/',(req,res)=>{
-
-    res.send("Server is here babies!!");
-
-})
-console.log("Server creation statred");
-
-app.listen(5000,()=>{
-    
-
-
-
-
-console.log("server create at: 5000");
-
+"use strict";
+exports.__esModule = true;
+var express = require("express");
+var app = express();
+app.get('/', function (req, res) {
+    res.send("Hello babies how you doing?");
+});
+app.listen(5000, function () {
+    console.log("server is created at  port: 5000");
 });
